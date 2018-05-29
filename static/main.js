@@ -1,9 +1,21 @@
 (() => {
   const JSON_PATH = './tweets.json';
+  const TWEET_CONTAINER_SELECTOR = '#tweetcontainer';
 
+  class Matcher {
+    constructor(identifier, re) {
+      this.identifier = identifier;
+      this.re = re;
+    }
+    
+    check(string) {
+      
+    }
+  }
+  
   class TrackerApp {
     constructor() {
-      this.tweetContainer = document.querySelector('#tweetcontainer');
+      this.tweetContainer = document.querySelector(TWEET_CONTAINER_SELECTOR);
 
       this.init();
     }
