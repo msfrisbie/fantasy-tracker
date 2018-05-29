@@ -69,8 +69,24 @@
       </div>
 
       <div class="container">
-        <div id="tweetcontainer"></div>
+        <table class="table table-hover table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Text</th>
+            </tr>
+          </thead>
+          <tbody id="tweetcontainer">
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
         <!-- Example row of columns -->
+        <!-- 
         <div class="row">
           <div class="col-md-4">
             <h2>Heading</h2>
@@ -88,6 +104,7 @@
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
         </div>
+        -->
 
         <hr>
 
@@ -108,14 +125,25 @@
     
     <script>
       const tweetContainer = document.querySelector('#tweetcontainer');
+      
       fetch('./tweets.json').then((response) => {
         const tweetPromise = response.json();
         
         tweetPromise.then((tweets) => {
           for (const tweet of tweets) {
-            const el = document.createElement('div');
-            el.innerText = tweet.text;
-            tweetContainer.appendChild(el);
+            const tr = document.createElement('tr'),
+                  idTh = document.createElement('th'),
+                  textTd = document.createElement('td');
+            
+            idTh.setAttribute('scope', 'row');
+            
+            idTh.innerText = tweet.id_str;
+            textTd.innerText = tweet.text;
+            
+            tr.appendChild(idTh);
+            tr.appendChild(textTd);
+            
+            tweetContainer.appendChild(tr);
           }
         });
       })
