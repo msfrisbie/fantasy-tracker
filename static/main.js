@@ -22,7 +22,7 @@
       this.navbarLinks = document.querySelectorAll('[data-link]');
       this.views = document.querySelectorAll('[data-view]');
       
-      this.selections = [
+      this.memberSelections = [
         {
           memberName: 'Patrick Hamann',
           playerName: 'Zaza Pachulia',
