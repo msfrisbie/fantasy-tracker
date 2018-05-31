@@ -37,6 +37,10 @@
       // Initialize navbar link buttons
       for (const navbarLink of this.navbarLinks) {
         navbarLink.addEventListener('click', (e) => {
+          for (const navbarLink of this.navbarLinks) {
+            navbarLink.parentElement.className = 'nav-item';
+          }
+          e.target.parentElement.className = 'nav-item active';
           this.showView(e.target.getAttribute('data-link'));
         });
       }
