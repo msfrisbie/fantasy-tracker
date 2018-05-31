@@ -52,7 +52,7 @@
         
         memberTh.innerHTML = memberSelection.memberName;
         playerNameTd.innerHTML = memberSelection.playerName;
-        tiebreakerTd = memberSelection.tiebreaker;
+        tiebreakerTd.innerHTML = memberSelection.tiebreaker;
         
         tr.appendChild(memberTh);
         tr.appendChild(playerNameTd);
