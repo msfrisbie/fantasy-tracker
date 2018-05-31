@@ -27,6 +27,61 @@
           memberName: 'Patrick Hamann',
           playerName: 'Zaza Pachulia',
           tiebreaker: 225
+        },
+        {
+          memberName: 'Eric Burger',
+          playerName: 'Klay Thompson',
+          tiebreaker: 213
+        },
+        {
+          memberName: 'Andrew Ryu',
+          playerName: 'Jose Calderon',
+          tiebreaker: 220
+        },
+        {
+          memberName: 'Ray Wu',
+          playerName: 'Javale McGee',
+          tiebreaker: 209
+        },
+        {
+          memberName: 'Ahir Bala',
+          playerName: 'JR Smith',
+          tiebreaker: 203
+        },
+        {
+          memberName: 'Michael Asensio',
+          playerName: 'Kevin Durant',
+          tiebreaker: 211
+        },
+        {
+          memberName: 'Peter Park',
+          playerName: 'Kyle Korver',
+          tiebreaker: 188
+        },
+        {
+          memberName: 'Anthony Bae',
+          playerName: 'Steph Curry',
+          tiebreaker: 192
+        },
+        {
+          memberName: 'Jason Wang',
+          playerName: 'Kendrick Perkins',
+          tiebreaker: 216
+        },
+        {
+          memberName: 'Nikhil Bansal',
+          playerName: 'Shaun Livingston',
+          tiebreaker: 193
+        },
+        {
+          memberName: 'Jonathan Weber',
+          playerName: 'Jeff Green',
+          tiebreaker: 201
+        },
+        {
+          memberName: 'Matt Frisbie',
+          playerName: 'Kevon Looney',
+          tiebreaker: 207
         }
       ];
       
