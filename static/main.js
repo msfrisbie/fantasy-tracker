@@ -138,7 +138,9 @@
       
       // Initialize trump tweet list
       fetch(JSON_PATH).then((response) => {
+        console.log('Fetched tweets!');
         response.json().then((tweets) => {
+          console.log('Got JSON of tweets!', tweets.length);
           for (const tweet of tweets) {
             if (tweet.id_str === FIRST_TWEET_ID_AFTER_GAME_4.toString()) {
               console.log(tweet);
