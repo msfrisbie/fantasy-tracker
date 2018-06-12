@@ -43,6 +43,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#" data-link="player-choices">Player Choices and Word Assignments</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-link="random-selection">Random Selection</a>
+          </li>
           <!--
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
@@ -113,6 +116,17 @@
         </table>
       </div>
       
+      <div data-view="random-selection" class="container">
+        <div class="alert alert-primary">
+          <p>First tweet after game 1:</p>
+          
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A.P. has just reported that the Russian Hoax Investigation has now cost our government over $17 million, and going up fast. No Collusion, except by the Democrats!</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/1002506360351846400?ref_src=twsrc%5Etfw">June 1, 2018</a></blockquote>
+
+          </p>Rand(1, 27) returned 23</p>
+          <p>Randomly chosen word: collusion</p>
+        </div>
+      </div>
+      
     </main>
 
     <!--
@@ -127,7 +141,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     <script src="./static/main.js"></script>
   </body>
 </html>
