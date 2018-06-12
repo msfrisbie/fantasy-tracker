@@ -48,73 +48,85 @@ Example tweet:
           memberName: 'Patrick Hamann',
           playerName: 'Zaza Pachulia',
           tiebreaker: 225,
-          wordAssignment: 'President'
+          wordAssignment: 'President',
+          regex: /(\W|^)president(\W|$|s)/mig
         },
         {
           memberName: 'Eric Burger',
           playerName: 'Klay Thompson',
           tiebreaker: 213,
-          wordAssignment: 'Economy'
+          wordAssignment: 'Economy',
+          regex: /(\W|^)economy(\W|$|s)/mig
         },
         {
           memberName: 'Andrew Ryu',
           playerName: 'Jose Calderon',
           tiebreaker: 220,
-          wordAssignment: 'Trump'
+          wordAssignment: 'Trump',
+          regex: /(\W|^)trump(\W|$|s)/mig
         },
         {
           memberName: 'Ray Wu',
           playerName: 'Javale McGee',
           tiebreaker: 209,
-          wordAssignment: 'FBI'
+          wordAssignment: 'FBI',
+          regex: /(\W|^)fbi(\W|$|s)/mig
         },
         {
           memberName: 'Ahir Bala',
           playerName: 'JR Smith',
           tiebreaker: 203,
-          wordAssignment: 'Fake'
+          wordAssignment: 'Fake',
+          regex: /(\W|^)fake(\W|$|s)/mig
         },
         {
           memberName: 'Michael Asensio',
           playerName: 'Kevin Durant',
           tiebreaker: 211,
-          wordAssignment: 'China'
+          wordAssignment: 'China',
+          regex: /(\W|^)china(\W|$|s)/mig
         },
         {
           memberName: 'Peter Park',
           playerName: 'Kyle Korver',
           tiebreaker: 188,
-          wordAssignment: 'Really'
+          wordAssignment: 'Really',
+          regex: /(\W|^)really(\W|$|s)/mig
         },
         {
           memberName: 'Anthony Bae',
           playerName: 'Steph Curry',
           tiebreaker: 192,
-          wordAssignment: 'Country'
+          wordAssignment: 'Country',
+          regex: /(\W|^)country(\W|$|s)/mig
         },
         {
           memberName: 'Jason Wang',
           playerName: 'Kendrick Perkins',
           tiebreaker: 216,
-          wordAssignment: 'And'
+          wordAssignment: 'And',
+          regex: /(\W|^)and(\W|$|s)/mig
         },
         {
           memberName: 'Nikhil Bansal',
           playerName: 'Shaun Livingston',
           tiebreaker: 193,
-          wordAssignment: 'Job'
+          wordAssignment: 'Job',
+          regex: /(\W|^)job(\W|$|s)/mig
         },
         {
           memberName: 'Jonathan Weber',
           playerName: 'Jeff Green',
           tiebreaker: 201,
-          wordAssignment: 'MS-13'
+          wordAssignment: 'MS-13',
+          regex: /(\W|^)ms-13(\W|$|s)/mig
         },
         {
           memberName: 'Matt Frisbie',
           playerName: 'Kevon Looney',
           tiebreaker: 207,
-          wordAssignment: 'Obama'
+          wordAssignment: 'Obama',
+          regex: /(\W|^)obama(\W|$|s)/mig
         }
       ];
       
