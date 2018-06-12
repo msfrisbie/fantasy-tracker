@@ -116,16 +116,19 @@
       for (const memberSelection of this.memberSelections) {
             const tr = document.createElement('tr'),
                   memberTh = document.createElement('th'),
+                  wordTd = document.createElement('td'),
                   playerNameTd = document.createElement('td'),
                   tiebreakerTd = document.createElement('td');
         
         memberTh.setAttribute('scope', 'row');
         
         memberTh.innerHTML = memberSelection.memberName;
+        wordTd.innerHTML = memberSelection.wordAssignment;
         playerNameTd.innerHTML = memberSelection.playerName;
         tiebreakerTd.innerHTML = memberSelection.tiebreaker;
         
         tr.appendChild(memberTh);
+        tr.appendChild(wordTd);
         tr.appendChild(playerNameTd);
         tr.appendChild(tiebreakerTd);
         
