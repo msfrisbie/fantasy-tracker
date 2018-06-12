@@ -2,6 +2,7 @@
   const JSON_PATH = './tweets.json';
   const TWEET_CONTAINER_SELECTOR = '#tweetcontainer';
   const PLAYER_SELECTION_CONTAINER_SELECTOR = '#selectioncontainer';
+  const FIRST_TWEET_ID_AFTER_GAME_4 = 1005550889422110721;
   
   class Matcher {
     constructor(identifier, re) {
@@ -139,6 +140,15 @@
       fetch(JSON_PATH).then((response) => {
         response.json().then((tweets) => {
           for (const tweet of tweets) {
+            if (tweet.id_str === FIRST_TWEET_ID_AFTER_GAME_4.toString()) {
+              console.log(tweet);
+            }
+            
+            // Ignore tweets before FIRST_TWEET_ID_AFTER_GAME_4
+            if (parseInt(tweet.id_str) < FIRST_TWEET_ID_AFTER_GAME_4) {
+              continue;
+            }
+            
             const tr = document.createElement('tr'),
                   idTh = document.createElement('th'),
                   textTd = document.createElement('td');
