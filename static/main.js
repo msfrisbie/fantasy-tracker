@@ -146,6 +146,7 @@
             
             // Ignore tweets before FIRST_TWEET_ID_AFTER_GAME_4
             if (parseInt(tweet.id_str) < FIRST_TWEET_ID_AFTER_GAME_4) {
+              console.log('jake', parseInt(tweet.id_str));
               continue;
             }
             
