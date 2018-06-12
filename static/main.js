@@ -1,3 +1,18 @@
+/*
+Example tweet:
+
+{
+  "source": "Twitter for iPhone", 
+  "id_str": "1006648161538961408", 
+  "text": "Here is the video, \u201cA Story of Opportunity\u201d that I shared with Kim Jong-un at the #SingaporeSummit\n\u27a1\ufe0fhttps://t.co/43oOci4jvo https://t.co/xBKFkDLtj7", 
+  "created_at": "Tue Jun 12 21:23:18 +0000 2018", 
+  "retweet_count": 7233, 
+  "in_reply_to_user_id_str": null, 
+  "favorite_count": 23517, 
+  "is_retweet": false
+}
+*/
+
 (() => {
   const JSON_PATH = './tweets.json';
   const TWEET_CONTAINER_SELECTOR = '#tweetcontainer';
@@ -12,6 +27,11 @@
     
     check(string) {
       
+    }
+    
+    static isCountableTweet(tweet) {
+      return !tweet.is_retweet && 
+             parseInt(tweet.id_str) >= FIRST_TWEET_ID_AFTER_GAME_4;
     }
   }
   
@@ -146,9 +166,7 @@
               console.log(tweet);
             }
             
-            // Ignore tweets before FIRST_TWEET_ID_AFTER_GAME_4
-            if (parseInt(tweet.id_str) < FIRST_TWEET_ID_AFTER_GAME_4) {
-              console.log('jake', parseInt(tweet.id_str));
+            if (!Matcher.isCountableTweet(tweet)) {
               continue;
             }
             
