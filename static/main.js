@@ -26,62 +26,74 @@
         {
           memberName: 'Patrick Hamann',
           playerName: 'Zaza Pachulia',
-          tiebreaker: 225
+          tiebreaker: 225,
+          wordAssignment: 'President'
         },
         {
           memberName: 'Eric Burger',
           playerName: 'Klay Thompson',
-          tiebreaker: 213
+          tiebreaker: 213,
+          wordAssignment: 'Economy'
         },
         {
           memberName: 'Andrew Ryu',
           playerName: 'Jose Calderon',
-          tiebreaker: 220
+          tiebreaker: 220,
+          wordAssignment: 'Trump'
         },
         {
           memberName: 'Ray Wu',
           playerName: 'Javale McGee',
-          tiebreaker: 209
+          tiebreaker: 209,
+          wordAssignment: 'FBI'
         },
         {
           memberName: 'Ahir Bala',
           playerName: 'JR Smith',
-          tiebreaker: 203
+          tiebreaker: 203,
+          wordAssignment: 'Fake'
         },
         {
           memberName: 'Michael Asensio',
           playerName: 'Kevin Durant',
-          tiebreaker: 211
+          tiebreaker: 211,
+          wordAssignment: 'China'
         },
         {
           memberName: 'Peter Park',
           playerName: 'Kyle Korver',
-          tiebreaker: 188
+          tiebreaker: 188,
+          wordAssignment: 'Really'
         },
         {
           memberName: 'Anthony Bae',
           playerName: 'Steph Curry',
-          tiebreaker: 192
+          tiebreaker: 192,
+          wordAssignment: 'Country'
         },
         {
           memberName: 'Jason Wang',
           playerName: 'Kendrick Perkins',
-          tiebreaker: 216
+          tiebreaker: 216,
+          wordAssignment: 'And'
         },
         {
           memberName: 'Nikhil Bansal',
           playerName: 'Shaun Livingston',
-          tiebreaker: 193
+          tiebreaker: 193,
+          wordAssignment: 'Job'
         },
         {
           memberName: 'Jonathan Weber',
           playerName: 'Jeff Green',
-          tiebreaker: 201
+          tiebreaker: 201,
+          wordAssignment: 'MS-13'
         },
         {
           memberName: 'Matt Frisbie',
           playerName: 'Kevon Looney',
-          tiebreaker: 207
+          tiebreaker: 207,
+          wordAssignment: 'Obama'
         }
       ];
       
