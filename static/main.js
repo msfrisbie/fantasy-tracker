@@ -182,7 +182,7 @@ Example tweet:
             }
             
             for (const memberSelection of this.memberSelections) {
-              const matches = tweet.text.match(memberSelection.regex).length;
+              const matches = (tweet.text.match(memberSelection.regex) || []).length;
               if (matches > 0) {
                 memberSelection.count += matches;
                 memberSelection.matchingTweetIds.push(tweet.id_str);
