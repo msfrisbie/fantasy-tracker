@@ -147,11 +147,14 @@ Example tweet:
       
       // Initialize player selections
       for (const memberSelection of this.memberSelections) {
-            const tr = document.createElement('tr'),
-                  memberTh = document.createElement('th'),
-                  wordTd = document.createElement('td'),
-                  playerNameTd = document.createElement('td'),
-                  tiebreakerTd = document.createElement('td');
+        memberSelection.count = 0;
+        memberSelection.matchingTweetIds = [];
+        
+        const tr = document.createElement('tr'),
+              memberTh = document.createElement('th'),
+              wordTd = document.createElement('td'),
+              playerNameTd = document.createElement('td'),
+              tiebreakerTd = document.createElement('td');
         
         memberTh.setAttribute('scope', 'row');
         
@@ -174,12 +177,16 @@ Example tweet:
         response.json().then((tweets) => {
           console.log('Got JSON of tweets!', tweets.length);
           for (const tweet of tweets) {
-            if (tweet.id_str === FIRST_TWEET_ID_AFTER_GAME_4.toString()) {
-              console.log(tweet);
-            }
-            
             if (!Matcher.isCountableTweet(tweet)) {
               continue;
+            }
+            
+            for (const memberSelection of this.memberSelections) {
+              const matches = tweet.text.match(memberSelection.regex).length;
+              if (matches > 0) {
+                memberSelection.count += matches;
+                memberSelection.matchingTweetIds.push(tweet.id_str);
+              }
             }
             
             const tr = document.createElement('tr'),
@@ -196,6 +203,7 @@ Example tweet:
 
             this.tweetContainer.appendChild(tr);
           }
+          console.log(this.memberSelections);
         });
       });
     }
