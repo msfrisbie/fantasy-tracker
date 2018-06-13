@@ -17,6 +17,7 @@ Example tweet:
   const JSON_PATH = './tweets.json';
   const TWEET_CONTAINER_SELECTOR = '#tweetcontainer';
   const PLAYER_SELECTION_CONTAINER_SELECTOR = '#selectioncontainer';
+  const WORD_COUNT_CONTAINER_SELECTOR = '#countcontainer';
   const FIRST_TWEET_ID_AFTER_GAME_4 = 1005550889422110721;
   
   class Matcher {
@@ -39,6 +40,7 @@ Example tweet:
     constructor() {
       this.tweetContainer = document.querySelector(TWEET_CONTAINER_SELECTOR);
       this.playerSelectionContainer = document.querySelector(PLAYER_SELECTION_CONTAINER_SELECTOR);
+      this.wordCountContainer = document.querySelector(WORD_COUNT_CONTAINER_SELECTOR);
 
       this.navbarLinks = document.querySelectorAll('[data-link]');
       this.views = document.querySelectorAll('[data-view]');
@@ -203,7 +205,35 @@ Example tweet:
 
             this.tweetContainer.appendChild(tr);
           }
+          
+          // Counts are ready for rendering
           console.log(this.memberSelections);
+          
+          for (const memberSelection of this.memberSelections) {
+
+            const tr = document.createElement('tr'),
+                  memberTh = document.createElement('th'),
+                  wordTd = document.createElement('td'),
+                  countTd = document.createElement('td'),
+                  tweetsTd = document.createElement('td');
+
+            memberTh.setAttribute('scope', 'row');
+
+            memberTh.innerHTML = memberSelection.memberName;
+            wordTd.innerHTML = memberSelection.wordAssignment;
+            countTd.innerHTML = memberSelection.count;
+            tweetsTd.innerHTML = '';
+            for (const matchingTweetId of memberSelection.matchingTweetIds) {
+              tweetsTd.innerHTML += `<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/realDonaldTrump/status/${matchingTweetId}"></a></blockquote>`;
+            }
+              
+            tr.appendChild(memberTh);
+            tr.appendChild(wordTd);
+            tr.appendChild(countTd);
+            tr.appendChild(tweetsTd);
+
+            this.wordCountContainer.appendChild(tr);
+          }
         });
       });
     }
