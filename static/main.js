@@ -209,7 +209,7 @@ Example tweet:
           // Counts are ready for rendering
           console.log(this.memberSelections);
           
-          for (const memberSelection of this.memberSelections) {
+          for (const memberSelection of this.memberSelections.sort((a, b) => a.matches > b.matches ? 1 : -1 )) {
 
             const tr = document.createElement('tr'),
                   memberTh = document.createElement('th'),
