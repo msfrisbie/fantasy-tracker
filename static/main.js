@@ -234,6 +234,8 @@ Example tweet:
 
             this.wordCountContainer.appendChild(tr);
           }
+          
+          this.navbarLinks[0].click();
         });
       });
     }
