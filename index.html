@@ -36,7 +36,13 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-link="random-selection">Word Count</a>
+          </li>
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-link="word-matches">Word Matches</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#" data-link="tweet-list">Tweet List</a>
           </li>
@@ -76,7 +82,7 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1>LODGE Fantasy Draft Tracker (under construction)</h1>
+          <h1>LODGE Fantasy Draft Tracker</h1>
           <!--
           <a href="https://msfrisbie.github.io/fantasy-tracker/">https://msfrisbie.github.io/fantasy-tracker/</a>
           <p>Source: http://www.trumptwitterarchive.com/data/realdonaldtrump/2018.json</p>
@@ -86,6 +92,21 @@
           <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
           -->
         </div>
+      </div>
+
+      <div data-view="word-matches" class="container">
+        <table class="table table-hover table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Member</th>
+              <th scope="col">Word Assignment</th>
+              <th scope="col">Matches</th>
+              <th scope="col">Matching Tweets</th>
+            </tr>
+          </thead>
+          <tbody id="countcontainer">
+          </tbody>
+        </table>
       </div>
 
       <div data-view="tweet-list" class="container">
