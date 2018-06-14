@@ -236,6 +236,11 @@ Example tweet:
           }
           
           this.navbarLinks[0].click();
+          
+          // <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          const scriptElement = document.createElement('script');
+          scriptElement.src = 'https://platform.twitter.com/widgets.js';
+          document.body.appendChild(scriptElement);
         });
       });
     }
