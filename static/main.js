@@ -222,7 +222,7 @@ Example tweet:
             memberTh.innerHTML = memberSelection.memberName;
             wordTd.innerHTML = memberSelection.wordAssignment;
             countTd.innerHTML = memberSelection.count;
-            tweetsTd.innerHTML = '';
+            tweetsTd.innerHTML = '<button onclick="var p = this.parentElement; p.style.display = (p.style.display === 'none' ? 'block' : 'none');">Toggle tweet visibility</button>';
             for (const matchingTweetId of memberSelection.matchingTweetIds) {
               tweetsTd.innerHTML += `<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/realDonaldTrump/status/${matchingTweetId}"></a></blockquote>`;
             }
